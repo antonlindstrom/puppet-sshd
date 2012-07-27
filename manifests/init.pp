@@ -1,15 +1,7 @@
 class sshd {
-  class {
-    'sshd::setup' : ;
-  }
 
-  Class['sshd::setup'] -> Class['sshd']
+  class { 'sshd::params': }
+  class { 'sshd::package': }
+  class { 'sshd::service': }
 
-  define config($value) {
-    sshd_config {
-      $name :
-        value   => $value,
-        notify  => Service['sshd'];
-    }
-  }
 }

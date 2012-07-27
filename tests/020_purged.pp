@@ -1,6 +1,6 @@
-resources {"sshd_config":
+resources { 'sshd_config':
   purge => true
 }
-sshd::config{"PrintMotd":
-  value => "no"
+sshd::config{ 'PrintMotd':
+  value => 'no'
 }
