@@ -5,7 +5,7 @@ class sshd::service($ensure='present') {
     'absent'  => 'stopped',
   }
 
-  service { 'sshd':
+  service { $sshd::params::service_name:
     ensure     => $ensure_service,
     name       => $sshd::params::service_name,
     enable     => true,
