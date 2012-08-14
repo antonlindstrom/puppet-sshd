@@ -5,7 +5,7 @@ class sshd::params {
       $client_package = 'openssh-client'
       $service_name   = 'ssh'
     }
-    centos, redhat : {
+    centos, redhat, scientific : {
       $client_package = 'openssh'
       $service_name   = 'sshd'
     }
